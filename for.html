@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    <script>
+        // for문(반복문)
+        // => 반복 횟수가 정해져 있는 반복
+
+        // document.write("문자 출력<br>");
+        // document.write("문자 출력<br>");
+        // document.write("문자 출력<br>");
+        // document.write("문자 출력<br>");
+        // document.write("문자 출력<br>");
+        
+        // for(시작값; 끝값; 증감값){
+
+        // }
+        // 시작값 => 변수=0;
+        // 끝값 => 조건식형태로 반복의 끝을 표현
+        // a=0으로 시작 a<=4 a++(1씩 변화)
+        // 0,1,2,3,4 5번의 반복 출력
+        
+        // 중첩 for문
+        // for(bigfor){
+        //     bigfor가 한번 반복할때
+        //     for(smallfor){
+        //         smallfor문은 전체 반복함
+        //     }
+        // }
+
+        // 구구단 출력하기
+        for(i=2; i<10; i++) {
+            document.write(`${i}단<br>`)
+            for(j=1; j<10; j++) {
+                document.write(`${i} * ${j} = ${i*j}<br>`);
+            }
+            document.write(`<br>`);
+        }
+
+        for(i=0; i<10; i++) {
+            // document.write('====*');
+            for(j=0; j<4; j++){
+                document.write('=');
+            }
+            document.write('*');
+        }
+        document.write(`<br>`);
+              
+        // for(i=0; i<10; i++) {
+        //     // 1*1
+        //     // 1*10 + 2*1
+        //     // 1*100 + 2*10 + 3*1
+
+        //     // i가 1, 10, 100...10^i
+        //     // j가 1, 2, 3..
+        //     for(j=1; j<=10; j++) {
+        //         document.write(i)
+        //     }        
+        // }
+
+        // 줄 bigfor
+        // 한줄 출력되는 칸 smallfor
+        for(a=1; a<=10; a++) {
+            for(b=1; b<=a; b++) {
+                document.write('*');
+            }
+            document.write(`<br>`);
+        }
+
+        // 입력받은 수가 짝수이면 입력받은 수 * 짝수항
+        // 입력 받은 수가 홀수이면 입력받은 수 * 홀수항
+        let n =4;
+        if(n%2 === 0) {
+            for(i=2; i<10; i+=2) {
+                document.write(`${n}*${i}=${n*i}<br>`);
+            }
+        } else {
+            for(i=1; i<10; i+=2) {
+                document.write(`${n}*${i}=${n*i}<br>`);
+            }
+        }
+        
+        
+        
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>
