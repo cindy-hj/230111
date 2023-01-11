@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>for</title>
     <script>
-        // for문(반복문)
-        // => 반복 횟수가 정해져 있는 반복
+        // for문(반복문)-------------------------------------------------------------------------------------
+        //     => 반복 횟수가 정해져 있는 반복
 
         // document.write("문자 출력<br>");
         // document.write("문자 출력<br>");
@@ -60,6 +60,7 @@
         //         document.write(i)
         //     }        
         // }
+        // 이건 너무 산수에 집착한 접근인가??? 완성시킬수 있나?
 
         // 줄 bigfor
         // 한줄 출력되는 칸 smallfor
@@ -82,10 +83,74 @@
                 document.write(`${n}*${i}=${n*i}<br>`);
             }
         }
-        
-        
-        
+        document.write(`<br>`);
 
+        // 입력문----------------------------------------------------------------------------------------
+        // 1. prompt('메세지','기본값');
+        //     => 문자열 입력문
+        //     => 입력 받은 값이 문자형
+        //     => 숫자 입력도 문자로 인식
+        //     => Number(); 숫자형으로 변경하는 형변환명령
+
+        // 2. confirm('메세지');
+        //     => 참, 거짓의 형태로 입력값 확인
+        //     => 입력받음 => 저장 => 출력
+
+        // let k = Number(prompt('숫자를 입력해주세요', '1,2,3'));
+        // document.write(`${k+k}`);
+        
+        // 입력 받은 값의 구구단의 출력
+        let k = Number(prompt('숫자를 입력하세요', ''));
+        for(i=1; i<10; i++) {
+            document.write(`${k}*${i}=${k*i}<br>`)
+        }
+        document.write(`<br>`);
+
+        // 잠이 오면 네, 잠이 안오면 아니오
+        if(confirm('잠이 오죠?')){
+            document.write('네');
+        } else {
+            document.write('아니요');
+        }
+        document.write(`<br>`);
+
+        let birthYear = Number(prompt('태어난 년도를 입력하세요', ''));
+        if(birthYear%12 === 0) {
+            document.write('당신은 원숭이띠 입니다.');
+        } else if (birthYear%12 === 1) {
+            document.write('당신은 닭띠 입니다.');
+        } else if (birthYear%12 === 2) {
+            document.write('당신은 개띠 입니다.');
+        } else if (birthYear%12 === 3) {
+            document.write('당신은 돼지띠 입니다.');
+        } else if (birthYear%12 === 4) {
+            document.write('당신은 쥐띠 입니다.');
+        } else if (birthYear%12 === 5) {
+            document.write('당신은 소띠 입니다.');
+        } else if (birthYear%12 === 6) {
+            document.write('당신은 호랑이띠 입니다.');
+        } else if (birthYear%12 === 7) {
+            document.write('당신은 토끼띠 입니다.');
+        } else if (birthYear%12 === 8) {
+            document.write('당신은 용띠 입니다.');
+        } else if (birthYear%12 === 9) {
+            document.write('당신은 뱀띠 입니다.');
+        } else if (birthYear%12 === 10) {
+            document.write('당신은 말띠 입니다.');
+        } else if (birthYear%12 === 11) {
+            document.write('당신은 양띠 입니다.');
+        }
+        document.write(`<br>`);
+
+        for(i=10; i>0; i--){
+            for(j=1; j<=i; j++) {
+                document.write(`*`);
+            }
+            document.write(`<br>`);
+        }
+        document.write(`<br>`);
+        
+        
     </script>
 </head>
 
